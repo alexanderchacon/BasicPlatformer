@@ -15,8 +15,8 @@
     <font>fonts\fnt_large</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_solid</object>
     <object>objects\obj_player</object>
+    <object>objects\obj_solid</object>
     <object>objects\obj_star</object>
   </objects>
   <rooms name="rooms">

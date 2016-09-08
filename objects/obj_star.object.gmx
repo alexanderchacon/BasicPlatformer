@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="5" enumb="13">
+    <event eventtype="5" enumb="32">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -49,10 +49,10 @@ room_goto(rm_test);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw th e text to start
+            <string>///Draw the text to start
 draw_set_halign(fa_center);
 draw_set_font(fnt_large);
-draw_text_transformed_colour(room_width/2,room_height/2,"Press ENTER to play",0.65,0.65,0,c_white,c_white,c_white,c_white,1);
+draw_text_transformed_colour(room_width/2,room_height/2,"Press SPACE to play",0.65,0.65,0,c_white,c_white,c_white,c_white,1);
 draw_set_halign(fa_middle);
 </string>
           </argument>

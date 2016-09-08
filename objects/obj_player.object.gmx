@@ -42,6 +42,11 @@ hspd = 0;
 //Vertical speed
 vspd = 0;
 
+//Double jump
+airjump = 1;
+
+
+
 
 </string>
           </argument>
@@ -70,11 +75,12 @@ vspd = 0;
 //Use another key keyboard_check(ord('D'));
 var rkey = keyboard_check(vk_right);
 var lkey = keyboard_check(vk_left);
-var jkey = keyboard_check(vk_space);
+var jkey = keyboard_check_pressed(vk_space);
 
 //Check code for the ground
 if( place_meeting(x, y+1, obj_solid) ){
-    
+
+    airjump = 1;
     vspd = 0;
     
     //Jumping
@@ -88,7 +94,15 @@ if( place_meeting(x, y+1, obj_solid) ){
     if (vspd &lt; 10){
         vspd += grav;
     }
-
+    
+    //Check for air jump
+    if(airjump &gt; 0) {
+        if(jkey){
+            vspd = -jspd;
+            airjump -= 1;
+        }
+    }
+    
 }
 
 //Movin to the right
