@@ -108,13 +108,27 @@ if( place_meeting(x, y+1, obj_solid) ){
 //Movin to the right
 
 if(rkey){
+
     hspd = spd;
+    
+    //Left wall jump
+    if(place_meeting(x-1, y, obj_solid) &amp;&amp; !place_meeting(x, y+1, obj_solid) &amp;&amp; !lkey){
+        vspd = -jspd;
+    }
+    
 }
 
 //Movin left
 
 if(lkey){
+
     hspd = -spd;
+    
+    //Right wall jump
+    if(place_meeting(x+1, y, obj_solid) &amp;&amp; !place_meeting(x, y+1, obj_solid) &amp;&amp; !lkey){
+        vspd = -jspd;
+    }
+    
 }
 
 //Check for not moving
